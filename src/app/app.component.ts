@@ -33,8 +33,4 @@ export class AppComponent {
     this.items.push(new WishItem(this.newWishText));
     this.newWishText = '';
   }
-
-  toggleItem(item: WishItem) {
-    item.isComplete = !item.isComplete;
-  }
 }
