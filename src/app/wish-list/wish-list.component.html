@@ -1,8 +1,8 @@
 <div *ngIf="wishes.length === 0;  else showItems">
     There are no wishes to display.
-  </div>
+</div>
   
-  <ng-template #showItems>
+<ng-template #showItems>
     <ul class="wish-list">
       <li *ngFor="let item of wishes; index as ii">
         <div class="form-check">
