@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WishItem } from 'src/shared/models/wishItem';
-import events from './../shared/services/EventService';
+import { EventService } from './../shared/services/EventService';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
     new WishItem('Find grass that cuts itself'),
   ];
 
-  constructor() {
+  constructor(events: EventService) {
     events.listen('removeWish', (wish: any) => {
       // remove wish from items
       let index = this.items.indexOf(wish);
