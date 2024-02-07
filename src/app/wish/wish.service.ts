@@ -16,7 +16,9 @@ export class WishService {
 
   private getStandardOptions(): any {
     return {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
     };
   }
 
